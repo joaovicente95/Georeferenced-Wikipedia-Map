@@ -1,0 +1,88 @@
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        tools:context="com.example.sd.geonames.WikiGeoNames">
+
+    </fragment>
+
+    <ImageButton
+        android:id="@+id/imageMapMode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="56dp"
+        android:layout_marginStart="22dp"
+        android:background="@mipmap/ic_mapview"
+        map:srcCompat="@mipmap/ic_mapview" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/imageMapMode"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="510dp"
+        android:background="@color/tempoBarra">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="90sp"
+            android:layout_height="90sp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="11dp"
+            map:srcCompat="?android:attr/galleryItemBackground" />
+
+        <TextView
+            android:id="@+id/tempo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/localidade"
+            android:layout_toEndOf="@+id/imageView"
+            android:fontFamily="sans-serif-condensed"
+            android:textColor="@color/textosTempo"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/localidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/imageView"
+            android:layout_toEndOf="@+id/imageView"
+            android:fontFamily="serif-monospace"
+            android:textAlignment="center"
+            android:textColor="@color/textosTempo"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/descricao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/imageView"
+            android:layout_below="@+id/tempo"
+            android:fontFamily="sans-serif-condensed"
+            android:textColor="@color/textosTempo"
+            android:textSize="27sp" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

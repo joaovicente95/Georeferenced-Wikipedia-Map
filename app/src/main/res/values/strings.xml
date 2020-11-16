@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">GeoNames</string>
+    <string name="title_activity_wiki_geo_names">SD_GeoMap</string>
+</resources>
